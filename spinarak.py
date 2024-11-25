@@ -4,7 +4,7 @@ from datetime import date
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from email.mime.text import MIMEText
-from pyvirtualdisplay import Display
+# from pyvirtualdisplay import Display
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.options import Options
@@ -28,8 +28,8 @@ location = 'Tokyo'
 
 magic_cell = ''
 
-display = Display(visible=0, size=(800, 800))  
-display.start()
+# display = Display(visible=0, size=(800, 800))  
+# display.start()
 
 chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
                                       # and if it doesn't exist, download it automatically,
@@ -149,6 +149,7 @@ def create_booking(day_of_month, num_of_guests, location):
 
 try:
     # メインの処理
+    print("start --> ")
     [create_booking(day_of_month, num_of_guests, location) for x in range(num_iterations)]
 except Exception as e:
     print(f"エラーが発生しました: {e}")
