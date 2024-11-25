@@ -146,11 +146,11 @@ def create_booking(day_of_month, num_of_guests, location):
     except NoSuchElementException:
         pass
 
-    try:
-        # メインの処理
-        [create_booking(day_of_month, num_of_guests, location) for x in range(num_iterations)]
-    except Exception as e:
-        print(f"エラーが発生しました: {e}")
+try:
+    # メインの処理
+    [create_booking(day_of_month, num_of_guests, location) for x in range(num_iterations)]
+except Exception as e:
+    print(f"エラーが発生しました: {e}")
 
 # test
 #send_email()
