@@ -148,6 +148,7 @@ def create_booking(day_of_month, num_of_guests, location):
 
 try:
     # メインの処理
+    print(f"start -->")
     [create_booking(day_of_month, num_of_guests, location) for x in range(num_iterations)]
 except Exception as e:
     print(f"エラーが発生しました: {e}")
