@@ -83,7 +83,7 @@ def create_booking(day_of_month, num_of_guests, location):
         "--window-size=1200,1200",
         "--ignore-certificate-errors"
  
-        #"--headless",
+        "--headless",
         #"--disable-gpu",
         #"--window-size=1920,1200",
         #"--ignore-certificate-errors",
