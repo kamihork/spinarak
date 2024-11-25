@@ -29,8 +29,9 @@ jobs:
           GMAIL_RECIPIENT: ${{ secrets.GMAIL_RECIPIENT }}
           GMAIL_RECIPIENT_2: ${{ secrets.GMAIL_RECIPIENT_2 }}
         run: |
+          set -e
           echo -e "current NAT'd source IP address: `curl -s api.ipify.org`\n\n"
-          python spinarak.py **2>&1**
+          python spinarak.py 2>&1
           ls -al
 
       - name: Check if there are any changes
